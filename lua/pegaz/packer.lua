@@ -43,7 +43,6 @@ return require('packer').startup(function(use)
   use("theprimeagen/harpoon")
   use("theprimeagen/refactoring.nvim")
   use("mbbill/undotree")
-  use("tpope/vim-fugitive")
   use("nvim-treesitter/nvim-treesitter-context");
 
   use {
@@ -73,6 +72,15 @@ return require('packer').startup(function(use)
   use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
+
+  use {
+      "NeogitOrg/neogit",
+      requires = {
+          {"nvim-lua/plenary.nvim"},
+          {"sindrets/diffview.nvim"},
+          {"nvim-telescope/telescope.nvim"}
+      }
+  }
 
 end)
 
